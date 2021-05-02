@@ -43,7 +43,7 @@
           <v-btn
             class="text-capitalize"
             color="deep-purple"
-            disabled
+            :disabled="!superAdmin"
             @click="deleteItem(item)"
           >
             Change Role
@@ -91,16 +91,16 @@
 <script>
 /* eslint-disable */
 import firebase from 'firebase';
-import { mapState } from 'vuex';
-
 export default {
   name: 'Manager',
   data() {
     return {
       users: [],
       user: null,
+      search: '',
       dialog: false,
       dialogDelete: false,
+      superAdmin: false,
       editedIndex: '',
       tableheaders: [
         {
@@ -113,9 +113,6 @@ export default {
         { text: 'Actions', value: 'actions', sortable: false },
       ],
     };
-  },
-  computed: {
-    ...mapState(['superAdmin']),
   },
 
   created() {
@@ -135,8 +132,10 @@ export default {
           user.id = doc.id;
           if (doc.data().role.user) {
             user.type = 'Normal User';
-          } else {
+          } else if (doc.data().role.admin){
             user.type = 'Admin User';
+          } else {
+            user.type = 'Super Admin';
           }
           console.log(doc.data());
           this.users.push(user);
@@ -144,9 +143,20 @@ export default {
       });
   },
   mounted () {
-    if (this.user.email == 'ahiabadaniel@gmail.com') {
-      this.superAdmin = true;
-    }
+    firebase.auth().onAuthStateChanged(userAuth => {
+            if (userAuth) {
+              firebase
+                .auth()
+                .currentUser.getIdTokenResult()
+                .then(tokenResult => {
+                  if (tokenResult.claims.superAdmin) {
+                    this.superAdmin = true;
+                  } else {
+                    this.superAdmin = false;
+                  }
+              });
+            }
+        });
   },
   watch: {
     dialog(val) {

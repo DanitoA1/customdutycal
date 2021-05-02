@@ -51,8 +51,8 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          :to="item.link !== '/'? item.link: ''"
-          @click="item.link === '/'? logOut(): ''"
+          :to="item.link"
+          @click="item.icon === 'mdi-logout'? logOut(): ''"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -80,7 +80,8 @@ export default {
       { title: 'Overview', icon: 'mdi-view-dashboard', link: '/admin/overview' },
       { title: 'Current Rates/Tariff', icon: 'mdi-animation-outline', link: '/admin/rates' },
       { title: 'Users Manager', icon: 'mdi-account-question-outline', link: '/admin/manager' },
-      { title: 'Logout', icon: 'mdi-logout', link: '/' },
+      { title: 'Goto Calculator', icon: 'mdi-calculator-variant', link: '/' },
+      { title: 'Logout', icon: 'mdi-logout', link: '' },
     ],
   }),
   methods: {

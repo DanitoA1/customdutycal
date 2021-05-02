@@ -27,7 +27,7 @@ exports.AddUserRole = functions.auth.user().onCreate(async (authUser) => {
 });
 exports.setUserRole = functions.https.onCall(async (data, context) => {
 
-  if (!context.auth.token.admin) return
+  if (!context.auth.token.superAdmin) return
 
   try {
     var _ = await admin.auth().setCustomUserClaims(data.uid, data.role)

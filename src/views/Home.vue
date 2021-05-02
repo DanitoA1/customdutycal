@@ -6,12 +6,29 @@
     background: #FCF4F8;
     "
   >
+    <v-app-bar
+      v-if="Admin"
+      collapse
+      absolute
+      color="#9B2D86"
+      dense
+      clipped-right
+    >
+      <v-btn
+        class="text-capitalize"
+        text
+        dark
+        to="/admin"
+      >
+        Admin
+      </v-btn>
+    </v-app-bar>
     <div
       style="
       background: #fff;
       position: sticky;
       top: 0;
-      z-index: 2;
+      z-index: 0;
       width: 100%;
       "
     >
@@ -36,7 +53,23 @@
         </div>
       </a>
     </div>
-    <v-container>
+    <v-container
+      v-if="rates.length == 0"
+    >
+      <div
+        class="text-center"
+      >
+          <v-progress-circular
+            :size="70"
+            :width="7"
+            color="purple"
+            indeterminate
+          ></v-progress-circular>
+      </div>
+    </v-container>
+    <v-container
+      v-else
+    >
       <v-card
         v-if="calculated"
         class="mb-4 fixedTop"
@@ -690,6 +723,7 @@ import ratelistArray from '@/rate.json'
 import tarifflistArray from '@/tariff.json'
 import ResultCmp from '@/components/ResultCmp.vue'
 import VueHtml2pdf from 'vue-html2pdf'
+import { mapState } from 'vuex';
 
 export default {
   name: 'Home',
@@ -723,6 +757,7 @@ export default {
       loader: null,
       loading: false,
       calculationDetails: [],
+      Admin: false,
       outPuts: [
         {
           name: 'CIF (Sum of FOB, Insurance and Freight)',
@@ -763,19 +798,33 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapState(['rates']),
+    ...mapState(['tariffs']),
+  },
+  created() {
+    this.getDatas();
+  },
   mounted() {
     this.importjson();
+    firebase.auth().onAuthStateChanged(userAuth => {
+            if (userAuth) {
+              firebase
+                .auth()
+                .currentUser.getIdTokenResult()
+                .then(tokenResult => {
+                  if (tokenResult.claims.superAdmin || tokenResult.claims.admin) {
+                    this.Admin = true;
+                  } else {
+                    this.Admin = false;
+                  }
+              });
+            }
+        });
   },
   components: {
     VueHtml2pdf,
     ResultCmp
-  },
-  computed: {
-    /* HsDescription () {
-      const hsIndex = this.tariff.findIndex((x) => x[ 'CET code' ] === this.selectedHscode);
-      let m = this.tariff[hsIndex].Description;
-      return m;
-    }, */
   },
   methods: {
     logOut() {
@@ -789,8 +838,12 @@ export default {
           console.log(error);
         });
     },
+    getDatas() {
+      this.$store.dispatch('getCurrentRates');
+      this.$store.dispatch('getCurrentTariffs');
+    },
     importjson() {
-      this.currency = JSON.parse(JSON.stringify(ratelistArray));
+      this.currency = JSON.parse(JSON.stringify(this.rates.rates));
       this.tariff = JSON.parse(JSON.stringify(tarifflistArray));
     },
     saveCalculation() {

@@ -170,7 +170,7 @@ router.beforeEach((to, from, next) => {
     if (userAuth) {
       auth.currentUser.getIdTokenResult()
         .then(({ claims }) => {
-          if (claims.admin) {
+          if (claims.admin || claims.superAdmin) {
             if (to.path !== '/admin' && from.path === '/login') {
               return next({
                 path: '/admin',
@@ -194,6 +194,5 @@ router.beforeEach((to, from, next) => {
       next();
     }
   });
-  next();
 });
 export default router;
