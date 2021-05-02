@@ -1,0 +1,237 @@
+[
+  {
+    "Code": "AED",
+    "Name": "United Arab Emirates Dirham",
+    "Exchange rate (&#8358;)": 103.72
+  },
+  {
+    "Code": "AUD",
+    "Name": "Australian Dollar",
+    "Exchange rate (&#8358;)": 281.22
+  },
+  {
+    "Code": "BRL",
+    "Name": "Brazil Real",
+    "Exchange rate (&#8358;)": 72.02
+  },
+  {
+    "Code": "CAD",
+    "Name": "Canada Dollar",
+    "Exchange rate (&#8358;)": 294.12
+  },
+  {
+    "Code": "CFA",
+    "Name": "CFA Franc - BCEAO",
+    "Exchange rate (&#8358;)": 0.69
+  },
+  {
+    "Code": "CHF",
+    "Name": "Switzerland Franc",
+    "Exchange rate (&#8358;)": 421.74
+  },
+  {
+    "Code": "CNY",
+    "Name": "China Yuan Renminbi",
+    "Exchange rate (&#8358;)": 57.95
+  },
+  {
+    "Code": "CVE",
+    "Name": "Cape verde Escudo",
+    "Exchange rate (&#8358;)": 4.09
+  },
+  {
+    "Code": "CZK",
+    "Name": "Czech Republic Koruna",
+    "Exchange rate (&#8358;)": 17.44
+  },
+  {
+    "Code": "DKK",
+    "Name": "Denmark Krone",
+    "Exchange rate (&#8358;)": 61.37
+  },
+  {
+    "Code": "EGP",
+    "Name": "Egypt Pound",
+    "Exchange rate (&#8358;)": 24.25
+  },
+  {
+    "Code": "EUR",
+    "Name": "Euro member countries",
+    "Exchange rate (&#8358;)": 456.74
+  },
+  {
+    "Code": "FCF",
+    "Name": "BCEAO",
+    "Exchange rate (&#8358;)": 0.69
+  },
+  {
+    "Code": "GBP",
+    "Name": "United kingdom Pound",
+    "Exchange rate (&#8358;)": 508.86
+  },
+  {
+    "Code": "GHS",
+    "Name": "Ghana Cedi",
+    "Exchange rate (&#8358;)": 66.42
+  },
+  {
+    "Code": "GMD",
+    "Name": "Gambia Dalasi",
+    "Exchange rate (&#8358;)": 7.59
+  },
+  {
+    "Code": "GNF",
+    "Name": "Guinea Franc",
+    "Exchange rate (&#8358;)": 0.04
+  },
+  {
+    "Code": "HKD",
+    "Name": "Hong Kong Dollar",
+    "Exchange rate (&#8358;)": 49.15
+  },
+  {
+    "Code": "HUF",
+    "Name": "Hungary Forint",
+    "Exchange rate (&#8358;)": 1.27
+  },
+  {
+    "Code": "IDR",
+    "Name": "Indonesia Rupiah",
+    "Exchange rate (&#8358;)": 0.03
+  },
+  {
+    "Code": "ILS",
+    "Name": "Israel Shekel",
+    "Exchange rate (&#8358;)": 115.23
+  },
+  {
+    "Code": "INR",
+    "Name": "India Rupee",
+    "Exchange rate (&#8358;)": 5.15
+  },
+  {
+    "Code": "JPY",
+    "Name": "Japanese Yen",
+    "Exchange rate (&#8358;)": 3.66
+  },
+  {
+    "Code": "KES",
+    "Name": "Kenyan Shilling",
+    "Exchange rate (&#8358;)": 3.46
+  },
+  {
+    "Code": "KRW",
+    "Name": "South Korean Won",
+    "Exchange rate (&#8358;)": 0.34
+  },
+  {
+    "Code": "LRD",
+    "Name": "Liberian Dollar",
+    "Exchange rate (&#8358;)": 2.41
+  },
+  {
+    "Code": "MUR",
+    "Name": "Mauritius Rupee",
+    "Exchange rate (&#8358;)": 9.54
+  },
+  {
+    "Code": "MXN",
+    "Name": "Mexican Peso",
+    "Exchange rate (&#8358;)": 18.96
+  },
+  {
+    "Code": "MYR",
+    "Name": "Malaysian Ringgit",
+    "Exchange rate (&#8358;)": 93.5
+  },
+  {
+    "Code": "NGN",
+    "Name": "Nigeria Naira",
+    "Exchange rate (&#8358;)": 1
+  },
+  {
+    "Code": "NOK",
+    "Name": "Norwegian krone",
+    "Exchange rate (&#8358;)": 43.32
+  },
+  {
+    "Code": "PHP",
+    "Name": "Philippine Peso",
+    "Exchange rate (&#8358;)": 7.91
+  },
+  {
+    "Code": "PKR",
+    "Name": "Pakistan Rupee",
+    "Exchange rate (&#8358;)": 2.39
+  },
+  {
+    "Code": "RUB",
+    "Name": "Russia Rouble",
+    "Exchange rate (&#8358;)": 5.01
+  },
+  {
+    "Code": "SAR",
+    "Name": "Saudi Arabia Riyal",
+    "Exchange rate (&#8358;)": 101.58
+  },
+  {
+    "Code": "SEK",
+    "Name": "Swedish Krona",
+    "Exchange rate (&#8358;)": 45.07
+  },
+  {
+    "Code": "SGD",
+    "Name": "Singapore Dollar",
+    "Exchange rate (&#8358;)": 284.9
+  },
+  {
+    "Code": "SLL",
+    "Name": "Sierra leone Leone",
+    "Exchange rate (&#8358;)": 0.04
+  },
+  {
+    "Code": "THB",
+    "Name": "Thailand Baht",
+    "Exchange rate (&#8358;)": 12.59
+  },
+  {
+    "Code": "TND",
+    "Name": "Tunisian Dinar",
+    "Exchange rate (&#8358;)": 139.91
+  },
+  {
+    "Code": "TWD",
+    "Name": "New Taiwan Dollar",
+    "Exchange rate (&#8358;)": 13.35
+  },
+  {
+    "Code": "USD",
+    "Name": "United States Dollar",
+    "Exchange rate (&#8358;)": 381
+  },
+  {
+    "Code": "WAU",
+    "Name": "WEST AFRICAN UNITS ACCOUNTS",
+    "Exchange rate (&#8358;)": 540.89
+  },
+  {
+    "Code": "XAF",
+    "Name": "Communaute Financiere Africaine CFA",
+    "Exchange rate (&#8358;)": 0.69
+  },
+  {
+    "Code": "XOF",
+    "Name": "Communaute Financiere Africaine BCE",
+    "Exchange rate (&#8358;)": 0.69
+  },
+  {
+    "Code": "ZAR",
+    "Name": "South Africa Rand",
+    "Exchange rate (&#8358;)": 24.93
+  },
+  {
+    "Code": "ZMK",
+    "Name": "Zambia Kwacha",
+    "Exchange rate (&#8358;)": 18.1
+  }
+ ]
