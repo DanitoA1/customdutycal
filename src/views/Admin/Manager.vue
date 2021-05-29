@@ -182,8 +182,10 @@ export default {
 
       if(currentRole == 1) {
         data = { uid, role: { admin: true } };
-      }else {
+      }else if (currentRole == 2) {
         data = { uid, role: { user: true } };
+      }else {
+        data = { uid, role: { admin: true } };
       }
 
       addMessage(data)
@@ -213,6 +215,8 @@ export default {
         this.changeRole(userID, 1);
       }else if(userRole.admin) {
         this.changeRole(userID, 2);
+      }else {
+        this.changeRole(userID, 3);
       }
       this.closeDelete();
     },
