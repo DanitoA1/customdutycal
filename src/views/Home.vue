@@ -674,6 +674,8 @@
           Logout
         </v-btn>
       </div>
+<instruction-modal />
+
     </v-container>
       <vue-html2pdf
         :show-layout="false"
@@ -724,6 +726,7 @@ import tarifflistArray from '@/tariff.json'
 import ResultCmp from '@/components/ResultCmp.vue'
 import VueHtml2pdf from 'vue-html2pdf'
 import { mapState } from 'vuex';
+import InstructionModal from '../components/InstructionModal.vue'
 
 export default {
   name: 'Home',
@@ -824,7 +827,8 @@ export default {
   },
   components: {
     VueHtml2pdf,
-    ResultCmp
+    ResultCmp,
+    InstructionModal
   },
   methods: {
     logOut() {
