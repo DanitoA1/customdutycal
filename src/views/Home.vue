@@ -30,6 +30,7 @@
       top: 0;
       z-index: 0;
       width: 100%;
+      margin-bottom: 30px;
       "
     >
       <a href="https://www.valuehandlers.com/">
