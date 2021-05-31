@@ -259,6 +259,12 @@ export default {
     color: #9b2d86;
   }
 }
+@media screen and (max-width: 960px) {
+  .grid-container {
+    max-width: 90%;
+    margin: 15px 10px;
+  }
+}
 @media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
