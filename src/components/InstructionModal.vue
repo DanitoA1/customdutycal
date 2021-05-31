@@ -179,6 +179,7 @@ export default {
   --primary: #9b2d86;
 }
 .instruction-button {
+  transition: 0.7s;
   cursor: pointer;
   position: fixed;
   bottom: 10px;
