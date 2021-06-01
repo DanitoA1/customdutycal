@@ -51,7 +51,7 @@
                 <div class="div3">
                   <img src="../assets/settings-1.svg" alt="search" />
                   <h4 class="mt-5">
-                    3. FATURES
+                    3. FEATURES
                   </h4>
                   <p>Features and Benefits of Valuehandlers Duty Calculator</p>
                   <p>
