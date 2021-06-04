@@ -182,8 +182,8 @@ export default {
   transition: 0.7s;
   cursor: pointer;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 15px;
   height: 60px;
   width: 60px;
   padding: 6px;
@@ -201,7 +201,7 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(200px, auto);
-  max-width: 70%;
+  max-width: 80%;
   margin: 15px auto;
   padding: 15px 0;
   img {
@@ -259,6 +259,12 @@ export default {
     color: #9b2d86;
   }
 }
+.top-text {
+  font-size: 20px;
+  font-weight : bold;
+  margin: 0 auto;
+  width : 80%; 
+}
 @media screen and (max-width: 960px) {
   .grid-container {
     max-width: 90%;
@@ -267,8 +273,8 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: max-content;
+    grid-template-columns: 1fr;
+    max-width: 100%;
     margin: 15px 10px;
     h4 {
       font-size: 15px;
@@ -294,5 +300,8 @@ export default {
     transition: 0.7s;
     font-size: 14px;
   }
+  .top-text {
+  font-size: 14px;
+}
 }
 </style>
