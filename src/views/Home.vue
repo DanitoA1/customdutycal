@@ -848,8 +848,8 @@ export default {
       this.$store.dispatch('getCurrentTariffs');
     },
     importjson() {
-      this.currency = JSON.parse(JSON.stringify(this.rates.rates));
       this.tariff = JSON.parse(JSON.stringify(tarifflistArray));
+      this.currency = JSON.parse(JSON.stringify(this.rates.rates));
     },
     saveCalculation() {
       this.$store.dispatch('saveCalculation', this.calculationDetails);

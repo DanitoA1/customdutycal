@@ -263,7 +263,7 @@ export default {
   font-size: 20px;
   font-weight : bold;
   margin: 0 auto;
-  width : 80%; 
+  width : 80%;
 }
 @media screen and (max-width: 960px) {
   .grid-container {
