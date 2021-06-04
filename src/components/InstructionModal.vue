@@ -15,8 +15,8 @@
                 </v-btn>
               </div>
             </v-toolbar>
-            <div class="top-text text-center">
-              Calculate Custom's Duty - Nigeria No 1 Duty Calculator Software | Valuehandlers
+            <div class="title text-center mt-10">
+              Calculate Customs Duty - Nigeria No 1 Duty Calculator Software | Valuehandlers
             </div>
             <div class="ms-15 me-15 mt-5 mb-5">
               <div class="grid-container">
@@ -51,7 +51,7 @@
                 <div class="div3">
                   <img src="../assets/settings-1.svg" alt="search" />
                   <h4 class="mt-5">
-                    3. FATURES
+                    3. FEATURES
                   </h4>
                   <p>Features and Benefits of Valuehandlers Duty Calculator</p>
                   <p>
