@@ -675,7 +675,7 @@
           Logout
         </v-btn>
       </div>
-<instruction-modal />
+      <instruction-modal />
 
     </v-container>
       <vue-html2pdf
@@ -746,7 +746,6 @@ export default {
       HsDescription: null,
       outputCurrency: 'NGN',
       inputCurrency: null,
-      currency: [],
       itemDescription: null,
       FOB: 0,
       Freight: 0,
@@ -805,9 +804,12 @@ export default {
   computed: {
     ...mapState(['rates']),
     ...mapState(['tariffs']),
+    currency() {
+      return this.rates.rates
+    }
   },
   created() {
-    this.getDatas();
+    this.getData();
   },
   mounted() {
     this.importjson();
@@ -843,13 +845,17 @@ export default {
           console.log(error);
         });
     },
-    getDatas() {
+    getData() {
       this.$store.dispatch('getCurrentRates');
       this.$store.dispatch('getCurrentTariffs');
     },
+    setCurrency() {
+      this.currency = this.rates.rates
+      console.log(this.currency)
+    },
     importjson() {
       this.tariff = JSON.parse(JSON.stringify(tarifflistArray));
-      this.currency = JSON.parse(JSON.stringify(this.rates.rates));
+      // this.currency = JSON.parse(JSON.stringify(this.rates.rates));
     },
     saveCalculation() {
       this.$store.dispatch('saveCalculation', this.calculationDetails);

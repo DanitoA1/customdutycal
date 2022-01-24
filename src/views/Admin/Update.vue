@@ -144,7 +144,7 @@ export default {
     ...mapState(['loader']),
   },
   created() {
-    this.getDatas();
+    this.getData();
     this.rateStatus = 0;
   },
   methods: {

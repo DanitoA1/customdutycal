@@ -127,10 +127,11 @@ export default {
     ...mapState(['tariffs']),
   },
   created() {
-    this.getDatas();
+    this.getData();
   },
   mounted() {
     this.importjson();
+    this.getData();
   },
   methods: {
     importjson() {
@@ -143,7 +144,7 @@ export default {
     ShowTariffs() {
       this.TariffShow = true;
     },
-    getDatas() {
+    getData() {
       this.$store.dispatch('getCurrentRates');
       this.$store.dispatch('getCurrentTariffs');
     },
