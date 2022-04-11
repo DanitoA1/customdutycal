@@ -70,8 +70,8 @@
                   v-model="selectedHscode"
                   @change="onHscodeSelect()"
                   :items="tariff"
-                  item-text="CET code"
-                  item-value="CET code"
+                  item-text="CET Code"
+                  item-value="CET Code"
                 ></v-autocomplete>
               </v-col>
             </v-row>
@@ -108,7 +108,7 @@
                   @change="onDescSelect()"
                   :items="tariff"
                   item-text="Description"
-                  item-value="CET code"
+                  item-value="CET Code"
                 ></v-autocomplete>
               </v-col>
             </v-row>
@@ -516,7 +516,7 @@ export default {
         }
       }
 
-      const hsIndex = this.tariff.findIndex((x) => x[ 'CET code' ] === this.selectedHscode);
+      const hsIndex = this.tariff.findIndex((x) => x[ 'CET Code' ] === this.selectedHscode);
       let m = parseFloat(this.tariff[hsIndex].ID);
       this.idPercent = m.toFixed(1);
       let ID = parseFloat(this.outPuts[0].value)*m/100;
@@ -568,7 +568,7 @@ export default {
     },
     generatePDF() {
       const doc = new jspdf();
-      const hsIndex = this.tariff.findIndex((x) => x[ 'CET code' ] === this.selectedHscode);
+      const hsIndex = this.tariff.findIndex((x) => x[ 'CET Code' ] === this.selectedHscode);
       let m = this.tariff[hsIndex].Description;
       const HsDescription = doc.splitTextToSize(m,120);
       const Description = doc.splitTextToSize(this.itemDescription,120);

@@ -104,7 +104,7 @@ export default {
         sortable: false,
         value: 'Description',
       },
-      { text: 'HSCODE', value: 'CET code' },
+      { text: 'HSCODE', value: 'CET Code' },
       { text: 'SU', value: 'SU' },
       { text: 'ID', value: 'ID' },
       { text: 'VAT', value: 'VAT' },

@@ -138,6 +138,7 @@ export default {
     snackbar: false,
     timeout: 4000,
     textSuccess: 'Update done successfully!!!',
+    apiInstance: null,
   }),
   computed: {
     ...mapState(['rateStatus']),
@@ -187,20 +188,20 @@ export default {
       if(this.FileType == 'Rate Upload')
         this.rates = result;
       else
-        this.tariffs = result;
+        this.tariffs = this.importjson();
       this.uploadData();
     },
     /* eslint-enable */
 
     importjson() {
-      this.tariffs = JSON.parse(JSON.stringify(tarifflistArray));
+      return JSON.parse(JSON.stringify(tarifflistArray));
     },
     uploadData() {
       // send updated rates to firebase
       if (this.FileType === 'Rate Upload') {
         this.$store.dispatch('uploadRates', this.rates);
       } else {
-        this.$store.dispatch('uploadTariffs', 'Test Data');
+        this.$store.dispatch('uploadTariffs', this.tariffs);
       }
     },
   },

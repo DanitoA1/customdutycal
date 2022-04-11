@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "cloudmersive-convert-api-client": "^2.7.4",
     "convert-csv-to-json": "^1.0.0",
     "core-js": "^3.6.5",
     "firebase": "^7.23.0",

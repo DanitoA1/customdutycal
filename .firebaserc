@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "valuehandlers-b4d2a",
-    "staging": "valuehandlers-b4d2a"
+    "staging": "valuehandlers-b4d2a",
+    "production": "valuehandlers-b4d2a"
   }
 }
