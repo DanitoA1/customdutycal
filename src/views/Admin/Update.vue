@@ -179,7 +179,10 @@ export default {
         const currentline = lines[i].split(',');
         for (let j = 0; j < headers.length; j++) {
           if(j == 2)
-            obj[headers[j]] = parseFloat(currentline[j]);
+            {
+              const floatValue = currentline[j].replace(/['"]+/g, '')
+              obj[headers[j]] = parseFloat(floatValue);
+            }
           else
             obj[headers[j]] = currentline[j];
         }
