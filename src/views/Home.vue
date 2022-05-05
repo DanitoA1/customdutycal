@@ -875,7 +875,7 @@ export default {
       const CIF = 0;
       if(this.outputCurrency === 'NGN') {
         const CurrencyIndex = this.currency.findIndex((x) => x.Code === this.inputCurrency);
-        let m = this.currency[CurrencyIndex][ 'Exchange rate (&#8358;)' ];
+        let m = this.currency[CurrencyIndex][ 'Exchange rate' ];
 
         let CISS = (F*0.01)*m;
         this.outPuts[3].value = CISS.toFixed(2);
@@ -894,8 +894,8 @@ export default {
       }else{
         const inputIndex = this.currency.findIndex((x) => x.Code === this.inputCurrency);
         const outputIndex = this.currency.findIndex((x) => x.Code === this.outputCurrency);
-        let m = this.currency[inputIndex][ 'Exchange rate (&#8358;)' ];
-        let n = this.currency[outputIndex][ 'Exchange rate (&#8358;)' ];
+        let m = this.currency[inputIndex][ 'Exchange rate' ];
+        let n = this.currency[outputIndex][ 'Exchange rate' ];
 
         let CISS = ((F*0.01)*m)/n;
         this.outPuts[3].value = CISS.toFixed(2);

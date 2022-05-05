@@ -39,7 +39,7 @@
           rounded
         >
           Update
-          <v-icon>mdi-upload</v-icon>
+          <v-icon>mdi-upload  </v-icon>
         </v-btn>
       </v-col>
     </v-row>
@@ -79,7 +79,7 @@
       </v-card-title>
       <v-data-table
         :headers="Rateheaders"
-        :items="rates.rates"
+        :items="currency"
         :search="search"
         :loading="rates.length == 0"
       ></v-data-table>
@@ -89,7 +89,6 @@
 
 <script>
 import tarifflistArray from '@/tariff.json';
-import ratelistArray from '@/rate.json';
 import { mapState } from 'vuex';
 
 export default {
@@ -117,7 +116,7 @@ export default {
         value: 'Name',
       },
       { text: 'Currency Code', value: 'Code' },
-      { text: 'Exchange rate ₦', value: 'Exchange rate (&#8358;)' },
+      { text: 'Exchange rate ₦', value: 'Exchange rate' },
     ],
     Tariffs: [],
     Rates: [],
@@ -125,10 +124,12 @@ export default {
   computed: {
     ...mapState(['rates']),
     ...mapState(['tariffs']),
+    currency() {
+      return this.rates.rates;
+    },
   },
   created() {
     this.getData();
-    console.log(this.rates);
   },
   mounted() {
     this.importjson();
@@ -136,7 +137,6 @@ export default {
   },
   methods: {
     importjson() {
-      this.Rates = JSON.parse(JSON.stringify(ratelistArray));
       this.Tariffs = JSON.parse(JSON.stringify(tarifflistArray));
     },
     ShowRates() {
