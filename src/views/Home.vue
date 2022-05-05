@@ -711,6 +711,7 @@
           :sumTotal='parseFloat(sumTotal)'
           :inputCurrency='inputCurrency'
           :outputCurrency='outputCurrency'
+          :dateTime='dateTime'
         />
       </section>
     </vue-html2pdf>
@@ -805,6 +806,10 @@ export default {
     ...mapState(['tariffs']),
     currency() {
       return this.rates.rates
+    },
+    dateTime() {
+      const myDate = new Date(this.rates.createdOn.seconds * 1000);
+      return myDate.toLocaleString();
     },
     tariff() {
       return this.tariffs.tariffs

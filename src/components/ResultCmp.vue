@@ -124,7 +124,7 @@
       <p
         class="success padding2"
       >
-        Rates used for this calculation are based on last updated value at 02:45pm 09/12/2020
+        Rates used for this calculation are based on last updated value at {{dateTime}}
       </p>
     </v-container>
   </v-container>
@@ -145,6 +145,7 @@ export default {
     sumTotal: Number,
     inputCurrency: String,
     outputCurrency: String,
+    dateTime: String,
   },
 };
 </script>

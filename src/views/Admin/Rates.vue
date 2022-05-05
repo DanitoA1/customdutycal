@@ -30,7 +30,7 @@
         <p
           :class="$vuetify.breakpoint.mdAndUp ? 'text-caption mx-2 my-2' : 'text-caption'"
         >
-          Last Updated: 24/09/2020
+          Last Updated: {{dateTime}}
         </p>
         <v-btn
           to="/admin/update"
@@ -126,6 +126,10 @@ export default {
     ...mapState(['tariffs']),
     currency() {
       return this.rates.rates;
+    },
+    dateTime() {
+      const myDate = new Date(this.rates.createdOn.seconds * 1000);
+      return myDate.toLocaleString();
     },
   },
   created() {
